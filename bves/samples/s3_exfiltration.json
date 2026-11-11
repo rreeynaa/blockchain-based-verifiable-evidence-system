@@ -1,0 +1,183 @@
+{
+  "Records": [
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000000",
+      "eventName": "ListBuckets",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:00Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0000-100000",
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "additionalEventData": {
+        "bytesTransferredOut": 524289000
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000001",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:37Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0001-100001",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "key": "exports/customers-part-001.csv"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "additionalEventData": {
+        "bytesTransferredOut": 524290000
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000002",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:14Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0002-100002",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "key": "exports/customers-part-002.csv"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "additionalEventData": {
+        "bytesTransferredOut": 524291000
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000003",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:51Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0003-100003",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "key": "exports/customers-part-003.csv"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "additionalEventData": {
+        "bytesTransferredOut": 524292000
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000004",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:13:28Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0004-100004",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "key": "exports/customers-part-004.csv"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "additionalEventData": {
+        "bytesTransferredOut": 524293000
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000005",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:14:05Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0005-100005",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "key": "exports/customers-part-005.csv"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000006",
+      "eventName": "PutBucketPolicy",
+      "eventSource": "s3.amazonaws.com",
+      "eventTime": "2026-03-14T02:14:42Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0006-100006",
+      "requestParameters": {
+        "bucketName": "prod-customer-data",
+        "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\"}]}"
+      },
+      "sourceIPAddress": "192.0.2.77",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/svc-reporting",
+        "principalId": "AIDASVC-REPOEXAMPLE",
+        "type": "IAMUser",
+        "userName": "svc-reporting"
+      }
+    }
+  ]
+}

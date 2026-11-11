@@ -1,0 +1,172 @@
+{
+  "Records": [
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000000",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:00Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0000-100000",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    },
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000001",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:37Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0001-100001",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    },
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000002",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:14Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0002-100002",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    },
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000003",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:51Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0003-100003",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    },
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000004",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:13:28Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0004-100004",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    },
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "errorMessage": "Failed authentication",
+      "eventID": "00000000-0000-4000-8000-000000000005",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:14:05Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0005-100005",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/admin-backup",
+        "principalId": "AIDAADMIN-BAEXAMPLE",
+        "type": "IAMUser",
+        "userName": "admin-backup"
+      }
+    }
+  ]
+}

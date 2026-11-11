@@ -1,0 +1,128 @@
+# BVES: api, ui, ipfs, hardhat-node, postgres (+ deployer one-shot and ingestor).
+# Usage: cp .env.example .env && docker compose up --build -d
+
+x-python: &python
+  build:
+    context: .
+    dockerfile: docker/python.Dockerfile
+    args:
+      REQUIREMENTS: requirements-api.txt
+  image: bves-api
+  env_file: .env
+  volumes:
+    - ./shared:/app/shared          # deployment.json (ABI + address) and master.key
+  restart: unless-stopped
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: bves
+      POSTGRES_USER: bves
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bves_dev_password}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bves -d bves"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  ipfs:
+    image: ipfs/kubo:v0.29.0
+    # --offline: demo node does not join the public IPFS network (add/cat/pin still work).
+    command: ["daemon", "--migrate=true", "--offline"]
+    volumes:
+      - ipfsdata:/data/ipfs
+      - ./docker/ipfs-init.sh:/container-init.d/001-bves.sh:ro
+    ports:
+      - "127.0.0.1:5001:5001"
+    healthcheck:
+      test: ["CMD-SHELL", "ipfs id >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  hardhat-node:
+    build:
+      context: .
+      dockerfile: docker/hardhat.Dockerfile
+    ports:
+      - "127.0.0.1:8545:8545"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:8545',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',method:'eth_blockNumber',params:[],id:1})}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  deployer:
+    build:
+      context: .
+      dockerfile: docker/hardhat.Dockerfile
+    command: ["npx", "hardhat", "run", "scripts/deploy.js", "--network", "docker"]
+    environment:
+      HARDHAT_RPC_URL: http://hardhat-node:8545
+      DEPLOYMENT_FILE: /shared/deployment.json
+    volumes:
+      - ./shared:/shared
+    depends_on:
+      hardhat-node:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    <<: *python
+    command: ["sh", "-c", "alembic upgrade head && uvicorn api.main:app --host 0.0.0.0 --port 8000"]
+    environment:
+      DATABASE_URL: postgresql+psycopg2://bves:${POSTGRES_PASSWORD:-bves_dev_password}@postgres:5432/bves
+      RPC_URL: http://hardhat-node:8545
+      IPFS_API_URL: http://ipfs:5001
+      DEPLOYMENT_FILE: /app/shared/deployment.json
+      MASTER_KEY_FILE: /app/shared/master.key
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ipfs:
+        condition: service_healthy
+      deployer:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  ui:
+    <<: *python
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+      args:
+        REQUIREMENTS: requirements-ui.txt
+    image: bves-ui
+    command: ["streamlit", "run", "ui/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--browser.gatherUsageStats=false"]
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+
+  ingestor:
+    <<: *python
+    command: ["python", "-m", "ingestor.watcher", "--dir", "/app/incoming"]
+    environment:
+      API_URL: http://api:8000
+    volumes:
+      - ./shared:/app/shared
+      - ./incoming:/app/incoming
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  ipfsdata:

@@ -1,0 +1,96 @@
+{
+  "Records": [
+    {
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000000",
+      "eventName": "ConsoleLogin",
+      "eventSource": "signin.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:00Z",
+      "eventType": "AwsConsoleSignIn",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0000-100000",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "sourceIPAddress": "45.155.205.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:root",
+        "principalId": "123456789012",
+        "type": "Root"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000001",
+      "eventName": "CreateUser",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:37Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0001-100001",
+      "requestParameters": {
+        "userName": "backdoor-user"
+      },
+      "sourceIPAddress": "45.155.205.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:root",
+        "principalId": "123456789012",
+        "type": "Root"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000002",
+      "eventName": "StopLogging",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:14Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0002-100002",
+      "requestParameters": {
+        "name": "arn:aws:cloudtrail:us-east-1:123456789012:trail/management-events"
+      },
+      "sourceIPAddress": "45.155.205.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:root",
+        "principalId": "123456789012",
+        "type": "Root"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000003",
+      "eventName": "DeleteTrail",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:51Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0003-100003",
+      "requestParameters": {
+        "name": "management-events"
+      },
+      "sourceIPAddress": "45.155.205.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:root",
+        "principalId": "123456789012",
+        "type": "Root"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Runtime deps for api + ingestor (kept small: slow networks matter)
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29
+pydantic>=2.6,<3
+sqlalchemy>=2.0,<2.1
+alembic>=1.13
+psycopg2-binary>=2.9
+python-multipart>=0.0.9
+PyJWT>=2.7
+cryptography>=42
+web3>=7.0,<8
+requests>=2.31
+watchdog>=4.0

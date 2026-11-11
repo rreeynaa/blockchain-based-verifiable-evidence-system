@@ -1,0 +1,105 @@
+{
+  "Records": [
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000000",
+      "eventName": "CreateAccessKey",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:00Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0000-100000",
+      "requestParameters": {
+        "userName": "dev-intern"
+      },
+      "responseElements": {
+        "accessKey": {
+          "accessKeyId": "AKIAEXAMPLEKEY0001",
+          "status": "Active"
+        }
+      },
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/dev-intern",
+        "principalId": "AIDADEV-INTEEXAMPLE",
+        "type": "IAMUser",
+        "userName": "dev-intern"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000001",
+      "eventName": "AttachUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2026-03-14T02:11:37Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0001-100001",
+      "requestParameters": {
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess",
+        "userName": "dev-intern"
+      },
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/dev-intern",
+        "principalId": "AIDADEV-INTEEXAMPLE",
+        "type": "IAMUser",
+        "userName": "dev-intern"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000002",
+      "eventName": "PutUserPolicy",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:14Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0002-100002",
+      "requestParameters": {
+        "policyDocument": "{\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"*\"}]}",
+        "policyName": "inline-admin",
+        "userName": "dev-intern"
+      },
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/dev-intern",
+        "principalId": "AIDADEV-INTEEXAMPLE",
+        "type": "IAMUser",
+        "userName": "dev-intern"
+      }
+    },
+    {
+      "awsRegion": "us-east-1",
+      "eventID": "00000000-0000-4000-8000-000000000003",
+      "eventName": "UpdateAssumeRolePolicy",
+      "eventSource": "iam.amazonaws.com",
+      "eventTime": "2026-03-14T02:12:51Z",
+      "eventType": "AwsApiCall",
+      "eventVersion": "1.08",
+      "recipientAccountId": "123456789012",
+      "requestID": "req-0003-100003",
+      "requestParameters": {
+        "roleName": "OrganizationAccountAccessRole"
+      },
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.15.0 Python/3.11 Linux/6.1",
+      "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/dev-intern",
+        "principalId": "AIDADEV-INTEEXAMPLE",
+        "type": "IAMUser",
+        "userName": "dev-intern"
+      }
+    }
+  ]
+}

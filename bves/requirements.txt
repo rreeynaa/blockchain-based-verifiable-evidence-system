@@ -1,0 +1,7 @@
+# Everything for local development (docker images use requirements-api/-ui only)
+-r requirements-api.txt
+-r requirements-ui.txt
+httpx>=0.27
+pytest>=8.0
+ruff>=0.4
+black>=24.0
